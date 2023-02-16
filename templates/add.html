@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Add Products    
+{% endblock %}
+
+{% block body %}
+
+    <h1>Add Product</h1>
+    <br>
+
+    <form action="/add" method="post">
+        <label for="products">Which Product:</label>
+        <select id="products" name="products">
+            <option value="">Select an option</option>
+            {% for start in starts %}
+            <option value={{ start["start"] }}>{{ start["start"] }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" id="textproduct" name="textproduct" placeholder="Type or select an option">
+        <label for="size">What Size:</label>
+        <select id="size" name="size">
+            <option value="">Select an option</option>
+            {% for size in sizes %}
+            <option value={{ size["size"] }}>{{ size["size"] }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" id="textsize" name="textsize" placeholder="Type or select an option">
+        <label for="type">Which Type:</label>
+        <select id="type" name="type">
+            <option value="">Select an option</option>
+            {% for type in types %}
+            <option value={{ type["type"] }}>{{ type["type"] }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" id="texttype" name="texttype" placeholder="Type or select an option">
+        <button type="submit">Click</button>
+    </form>
+
+    <script>
+  // Bind the input field to the dropdown menu
+  document.getElementById("products").addEventListener("change", function() {
+    document.getElementById("textproduct").value = this.value;
+  });
+    document.getElementById("size").addEventListener("change", function() {
+    document.getElementById("textsize").value = this.value;
+  });
+    document.getElementById("type").addEventListener("change", function() {
+    document.getElementById("texttype").value = this.value;
+  });
+    </script>
+    
+{% endblock %}

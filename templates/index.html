@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Welcome    
+{% endblock %}
+
+{% block body %}
+
+        <form action="/size" method="get">
+            {% for p in s_display %}
+                <button type="submit" name="product" value="{{ p["start"] }}">{{ p["start"] }}</button>       
+            {% endfor %}
+        </form>
+	
+		<form action="/add" method="get">
+		    <button type="submit" name="add" value="+">Add</button>
+	    </form>
+
+{% endblock %}

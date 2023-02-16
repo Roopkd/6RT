@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Available    
+{% endblock %}
+
+{% block body %}
+
+        <h1>Product's</h1>
+
+        <form action="/delete" method="get">
+            {% for id in available %}
+            <section>
+                <div>{{ id["id"] }}</div>
+                <button type="submit" name="delete" value="{{ id["id"] }}">Sold!</button>       
+            </section>
+            {% endfor %}
+        </form>
+	
+		<form action="/" method="get">
+		    <button type="submit" name="home">Home</button>
+	    </form>
+
+{% endblock %}

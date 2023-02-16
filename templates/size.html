@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Available Size    
+{% endblock %}
+
+{% block body %}
+
+        <h1>Available Size</h1>
+
+        <form action="/type" method="get">
+            {% for s in size_display %}
+                <button type="submit" name="size" value={{ s["size"] }}>{{ s["size"] }}</button>       
+            {% endfor %}
+        </form>
+
+{% endblock %}

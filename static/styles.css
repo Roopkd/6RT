@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+body {
+    font-family: 'DM Serif Display', serif;
+    background: #201315;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: auto;
+}
+
+button {
+    font-family: 'DM Serif Display', serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: auto;
+  width: 300px;
+  border: none;
+  font-size: 50px;
+  background: #e76d57;
+  padding: 10px;
+  margin: 30px;
+  text-align: center;
+  color: #f8f3eb;
+}
+
+form {
+    width: 70vh:
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+label {
+    font-size: 40px;
+    color: #f8f3eb;
+}
+
+h1 {
+    position: absolute;
+    top: 10px;
+    font-size: 50px;
+    color: #f8f3eb;
+}
+
+select {
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+}
+
+div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  height: auto;
+  font-size: 50px;
+  background: #e76d57;
+  color: #f8f3eb;
+  margin: auto;
+  text-align: center;
+}
